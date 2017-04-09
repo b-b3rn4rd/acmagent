@@ -270,8 +270,9 @@ class TestRequestCert(unittest.TestCase):
         cli._request_cert(args, parser_mock)
 
         # request_certificate method was called with certificate
+        certificate_id = self.certificate_arn.split('/')[-1]
         request_certificate_mock.return_value.request_certificate.assert_called_once_with(certificate)
-        parser_mock.exit.assert_called_once_with(0, self.certificate_arn.split('/')[-1])
+        parser_mock.exit.assert_called_once_with(0, "{}\n".format(certificate_id))
 
 if __name__ == '__main__':
     unittest.main()

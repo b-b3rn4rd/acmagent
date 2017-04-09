@@ -9,7 +9,7 @@ with io.open(os.path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name='acmagent',
-    version='1.0.0',
+    version='1.0.1',
     description='ACM agent - automates ACM certificates',
     long_description=long_description,
     url='https://github.com/b-b3rn4rd/acmagent',

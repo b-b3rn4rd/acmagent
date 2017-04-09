@@ -105,7 +105,7 @@ def _request_cert(args, parser):
     if args.generate_cli_skeleton:
         json_file = request.Certificate.template()
         logger.debug('Generating json input file: {}'.format(json_file))
-        parser.exit(0, json_file + "\n")
+        parser.exit(0, "{}\n".format(json_file))
 
     if args.cli_input_json:
         try:
@@ -131,7 +131,7 @@ def _request_cert(args, parser):
 
     certificate_id = (response['CertificateArn'].split('/')[-1])
     logger.debug('Success, {} certificate was issued, id: {}'.format(acm_certificate['DomainName'], certificate_id))
-    parser.exit(0, certificate_id)
+    parser.exit(0, "{}\n".format(certificate_id))
 
 
 def _setup_argparser():
