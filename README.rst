@@ -29,12 +29,19 @@ Usage
 Issuing ACM certificates
 ------------------------
 
-The simplest option to request ACM certificate is to specify ``--domain-name`` and ``--validation-domain`` parameters.
+The simplest option to request ACM certificate is to specify ``--domain-name`` and/or ``--validation-domain`` parameters.
+
+::
+
+    $ acmagent request-certificate --domain-name *.dev.example.com
+    12345678-1234-1234-1234-123456789012
+
 
 ::
 
     $ acmagent request-certificate --domain-name *.dev.example.com --validation-domain example.com
     12345678-1234-1234-1234-123456789012
+
 
 Optionally, if you need to generate a certificate for multiple domain names you can provide the ``--alternative-names`` parameter to specify **space separated** alternative domain names.
 
@@ -44,6 +51,7 @@ Optionally, if you need to generate a certificate for multiple domain names you 
     12345678-1234-1234-1234-123456789012
 
 ACMAgent offers an option to specify JSON input file instead of typing them at the command line using ``--cli-input-json`` parameter.
+
 - Generate CLI skeleton output
 
 ::
@@ -88,16 +96,13 @@ confirm-certificate
     usage: acmagent confirm-certificate [-h] --certificate-id CERTIFICATE_ID
                                     [--wait WAIT] [--attempts ATTEMPTS]
                                     [--debug] [--credentials CREDENTIALS]
-
-optional arguments:
-  -h, --help            show this help message and exit
-  --certificate-id CERTIFICATE_ID
-                        Certificate id
-  --wait WAIT           Timeout in seconds between querying IMAP server
-  --attempts ATTEMPTS   Number of attempts to query IMAP server
-  --debug               (boolean) Send logging to standard output
-  --credentials CREDENTIALS
-                        Explicitly provide IMAP credentials file
+    optional arguments:
+    -h, --help                      show this help message and exit
+    --certificate-id CERTIFICATE_ID Certificate id
+    --wait WAIT                     Timeout in seconds between querying IMAP server
+    --attempts ATTEMPTS             Number of attempts to query IMAP server
+    --debug (boolean)               Send logging to standard output
+    --credentials CREDENTIALS       Explicitly provide IMAP credentials file
 
 Examples
 ^^^^^^^^
