@@ -7,6 +7,7 @@ import urllib2
 import time
 import yaml
 import acmagent
+import pkg_resources
 from acmagent import request
 from acmagent import confirm
 
@@ -141,6 +142,12 @@ def _setup_argparser():
     :return: argparse.ArgumentParser
     """
     parser = argparse.ArgumentParser(description='ACM agent')
+    parser.add_argument(
+        '-v', '--version', action='version',
+        version=pkg_resources.get_distribution("acmagent").version,
+        help='print acmagent version'
+    )
+
     subparsers = parser.add_subparsers(
         title='ACM agent - automates ACM certificates',
         description='ACM agents provides functionality to request and confirm ACM certificates using the CLI interface')
