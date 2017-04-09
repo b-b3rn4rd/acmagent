@@ -1,4 +1,5 @@
-.. image:: https://travis-ci.org/b-b3rn4rd/acmagent.svg?branch=master :target: https://travis-ci.org/b-b3rn4rd/acmagent
+.. image:: https://travis-ci.org/b-b3rn4rd/acmagent.svg?branch=master
+    :target: https://travis-ci.org/b-b3rn4rd/acmagent
 
 ======================================
 ACMagent - automates ACM certificates
