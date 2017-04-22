@@ -1,6 +1,10 @@
 .. image:: https://travis-ci.org/b-b3rn4rd/acmagent.svg?branch=master
     :target: https://travis-ci.org/b-b3rn4rd/acmagent
 
+.. image:: https://coveralls.io/repos/github/b-b3rn4rd/acmagent/badge.svg?branch=master
+    :target: https://coveralls.io/github/b-b3rn4rd/acmagent?branch=master
+
+
 ======================================
 ACMagent - automates ACM certificates
 ======================================
