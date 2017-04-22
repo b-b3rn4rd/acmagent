@@ -1,6 +1,8 @@
 import os
 import io
+import acmagent
 from setuptools import setup, find_packages
+
 
 here = os.path.abspath(os.path.dirname(__file__))
 
@@ -9,7 +11,7 @@ with io.open(os.path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name='acmagent',
-    version='1.0.1',
+    version=acmagent.VERSION,
     description='ACM agent - automates ACM certificates',
     long_description=long_description,
     url='https://github.com/b-b3rn4rd/acmagent',

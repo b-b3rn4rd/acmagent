@@ -4,8 +4,7 @@ import yaml
 from logging.handlers import RotatingFileHandler
 
 
-def send_stdout(message):
-    print (message)
+VERSION = '1.0.1'
 
 
 def load_imap_credentials(file='.acmagent'):
