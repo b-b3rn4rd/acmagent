@@ -274,5 +274,14 @@ class TestRequestCert(unittest.TestCase):
         request_certificate_mock.return_value.request_certificate.assert_called_once_with(certificate)
         parser_mock.exit.assert_called_once_with(0, "{}\n".format(certificate_id))
 
+
+class TestArguments(unittest.TestCase):
+    @patch("acmagent.cli.argparse.ArgumentParser.exit")
+    def test_version_argument_uses_setup_file_value(self, argparse_mock):
+        parser = cli._setup_argparser()
+        parser.parse_args(['--version'])
+        argparse_mock.assert_any_call(message=acmagent.VERSION+'\n')
+
+
 if __name__ == '__main__':
     unittest.main()

@@ -143,7 +143,8 @@ def _setup_argparser():
     """
     parser = argparse.ArgumentParser(description='ACM agent')
     parser.add_argument(
-        '-v', '--version', action='version',
+        '-v', '--version',
+        action='version',
         version=pkg_resources.get_distribution("acmagent").version,
         help='print acmagent version'
     )
